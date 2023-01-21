@@ -12,7 +12,7 @@ function Home() {
         <div className={styles.right}>
           <div>
             Current Balance
-            <div className={styles.balanceText}>$7,560.00</div>
+            <div className={styles.balanceText}>$7,000.00</div>
           </div>
           <div>Monthly Summary</div>
           <div>Fixed Expenses</div>
