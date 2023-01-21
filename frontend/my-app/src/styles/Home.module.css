@@ -1,10 +1,21 @@
 body {
   margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
 }
 
 .banner {
   max-height: 300px;
   overflow: hidden;
+  /*border-bottom: solid 3px black;*/
+}
+
+.welcome {
+  padding: 50px;
+  text-align: center;
+  font-size: 50px;
+  position: absolute;
+  top: 0;
 }
 
 .banner img {
@@ -18,6 +29,8 @@ body {
   position: absolute;
   top: 250px;
   left: 200px;
+  /*border: solid 2.5px;*/
+  border-radius: 50%;
 }
 
 .profile img {
@@ -50,9 +63,8 @@ body {
   text-align: center;
   width: 100%;
   height: 1200px;
-  border: solid 2px;
+  border: solid 3px black;
   border-radius: 25px;
-  border-color: black;
 }
 
 .right {
@@ -66,9 +78,16 @@ body {
 .right > div {
   text-align: center;
   width: 100%;
-  height: 200px;
-  border: solid 2px;
+  border: solid 3px black;
   border-radius: 25px;
-  border-color: black;
   margin-bottom: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.balanceText {
+  font-size: 58px;
+  padding-top: 30px;
 }

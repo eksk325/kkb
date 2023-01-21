@@ -1,25 +1,23 @@
-import sunset from "../images/sunset.png";
-import profile from "../images/ariel.jpg";
 import styles from "../styles/Home.module.css";
+import Banner from "../js/banner";
 
 function Home() {
   return (
     <div>
-      <div className={styles.banner}>
-        <img src={sunset}></img>
-        <div className={styles.profile}>
-          <img src={profile}></img>
-        </div>
-      </div>
+      <Banner />
       <div className={styles.main}>
         <div className={styles.left}>
           <div className={styles.table}>blah blah blah</div>
         </div>
         <div className={styles.right}>
-          <div>CURRENT BALANCE</div>
-          <div>GRAPH</div>
-          <div>LARGEST SPENDING</div>
-          <div>HIGHEST INCOME</div>
+          <div>
+            Current Balance
+            <div className={styles.balanceText}>$7,560.00</div>
+          </div>
+          <div>Monthly Summary</div>
+          <div>Fixed Expenses</div>
+          <div>Largest Spending</div>
+          <div>Best Income</div>
         </div>
       </div>
     </div>
