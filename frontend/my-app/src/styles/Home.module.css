@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+}
+
+.banner {
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+}
+
+.profile {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  top: 250px;
+  left: 200px;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.main {
+  margin-top: 100px;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-bottom: 100px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  width: 70%;
+
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table {
+  text-align: center;
+  width: 100%;
+  height: 1200px;
+  border: solid 2px;
+  border-radius: 25px;
+  border-color: black;
+}
+
+.right {
+  width: 25%;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right > div {
+  text-align: center;
+  width: 100%;
+  height: 200px;
+  border: solid 2px;
+  border-radius: 25px;
+  border-color: black;
+  margin-bottom: 40px;
+}
