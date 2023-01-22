@@ -21,6 +21,10 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     salt: String,
+    currentBalance: {
+      type: Number,
+      default: 0,
+    },
     categoryList: [
       {
         type: String,

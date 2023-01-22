@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "../styles/Create.module.css";
-import piggy from "../images/piggy.png";
+import piggy from "../images/piggy2.png";
 import { set } from "lodash";
 import { useNavigate } from "react-router-dom";
 
