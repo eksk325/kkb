@@ -1,0 +1,69 @@
+.createBox {
+  z-index: 0;
+  opacity: 100%;
+  position: absolute;
+  margin-top: 23vh;
+  border: 3px solid;
+  border-radius: 60px;
+  width: 400px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+  background-color: white;
+  z-index: 1;
+  text-align: center;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  font-size: 26px;
+}
+
+.createBox label {
+  margin-right: 10px;
+}
+
+.createBox label:hover {
+  cursor: pointer;
+}
+
+.createBox span {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.createForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.createForm input {
+  margin-top: 27px;
+  border: 0px;
+  border-bottom: 2px solid;
+  padding: 8px;
+  width: 230px;
+  font-size: 16px;
+}
+
+.createForm input:focus {
+  outline: 0;
+}
+
+.submitBtn {
+  width: 250px;
+  padding: 14px;
+  margin-top: 30px;
+  border: 0px;
+  border-radius: 30px;
+  background-color: rgb(199, 199, 199);
+  color: rgb(78, 78, 78);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.submitBtn:hover {
+  background-color: rgb(171, 171, 171);
+  cursor: pointer;
+}

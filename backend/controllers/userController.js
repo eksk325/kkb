@@ -37,14 +37,14 @@ const login = async (req, res) => {
   User.findOne({ email }, (err, user) => {
     if (err || !user) {
       return res.status(400).json({
-        error: "Email not found",
+        msg: "Email not found",
       });
     }
 
     // Authenticate user
     if (!user.authenticate(password)) {
       return res.status(400).json({
-        error: "Email and password do not match",
+        msg: "Email and password do not match",
       });
     }
 
