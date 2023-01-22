@@ -21,6 +21,35 @@ const userSchema = new mongoose.Schema(
       required: true,
     },
     salt: String,
+    categoryList: [
+      {
+        type: String,
+      },
+    ],
+    fixedIncome: [
+      {
+        title: String,
+        amount: Number,
+      },
+    ],
+    fixedExpenses: [
+      {
+        title: String,
+        amount: Number,
+      },
+    ],
+    moneyRecords: [
+      {
+        date: Date,
+        amount: Number,
+        category: String,
+        extraText: String,
+        income: {
+          type: Boolean,
+          default: true,
+        },
+      },
+    ],
   },
   { timestamps: true }
 );
