@@ -1,16 +1,56 @@
 import React, { useState } from "react";
 import styles from "../styles/Create.module.css";
 import piggy from "../images/piggy.png";
+import { set } from "lodash";
+import { useNavigate } from "react-router-dom";
 
 function Create() {
-  const backText = "<  go back to login page";
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
+
+  const createAccount = async (e) => {
+    e.preventDefault();
+
+    const accountData = {
+      name: document.getElementById("newUserName").value,
+      email: document.getElementById("newUserEmail").value,
+      password: document.getElementById("newUserPassword").value,
+    };
+
+    console.log(accountData);
+
+    const response = await fetch("/api/signup", {
+      method: "POST",
+      body: JSON.stringify(accountData),
+      headers: { "Content-type": "application/json; charset=UTF-8" },
+    });
+
+    const json = await response.json();
+
+    if (!response.ok) {
+      console.log(json.msg);
+      setErrorMessage(json.msg);
+    } else {
+      console.log(json.msg);
+      navigate("/");
+    }
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.createBox}>
-        <div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           <span>Create a new account</span>
-
-          <form className={styles.createForm}>
+          <label
+            style={{
+              paddingTop: "15px",
+              color: "rgb(224, 75, 75)",
+              fontSize: "14px",
+            }}
+          >
+            {errorMessage}
+          </label>
+          <form className={styles.createForm} onSubmit={createAccount}>
             <input
               type="text"
               placeholder="Name"
@@ -31,7 +71,7 @@ function Create() {
               id="newUserPassword"
               required
             ></input>
-            <button className={styles.submitBtn}>Next</button>
+            <button className={styles.submitBtn}>Submit</button>
           </form>
         </div>
         <div>

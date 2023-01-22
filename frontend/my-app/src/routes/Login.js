@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
 
 function Login() {
-  const welcomeText = "Log in";
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
@@ -49,9 +48,9 @@ function Login() {
 
   return (
     <div className={styles.container}>
-      <span>{welcomeText}</span>
+      <span>Log in</span>
       <label className={styles.errorMessage}>{errorMessage}</label>
-      <form className={styles.loginForm}>
+      <form className={styles.loginForm} onSubmit={login}>
         <input
           type="text"
           placeholder="Email"
@@ -65,9 +64,7 @@ function Login() {
           id="userPassword"
           required
         ></input>
-        <button className={styles.continueBtn} onClick={login} type="submit">
-          Continue
-        </button>
+        <button className={styles.continueBtn}>Continue</button>
       </form>
       <button className={styles.createBtn} onClick={createAccount}>
         Create an account

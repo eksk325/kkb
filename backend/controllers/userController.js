@@ -7,11 +7,12 @@ const expressJwt = require("express-jwt");
 // SIGN UP (POST new user)
 const signup = async (req, res) => {
   // Validation of user info
+  console.log(req);
   const errors = validationResult(req);
 
   if (!errors.isEmpty()) {
     return res.status(400).json({
-      error: errors.array()[0].msg,
+      msg: errors.array()[0].msg,
     });
   }
 
@@ -19,12 +20,12 @@ const signup = async (req, res) => {
   user.save((err, user) => {
     if (err) {
       return res.status(400).json({
-        error: "Unable to add user",
+        msg: "Email already in use",
       });
     }
 
     return res.json({
-      message: "Success",
+      msg: "Success",
       user,
     });
   });
