@@ -1,0 +1,83 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: auto;
+  margin-top: 20vh;
+  align-items: center;
+  border: 3px solid;
+  border-radius: 60px;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  box-shadow: 1vmax 1vmax rgb(248, 215, 49);
+}
+
+.container span {
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.errorMessage {
+  font-size: 16px;
+  padding-top: 14px;
+  color: rgb(215, 52, 52);
+  font-weight: 500;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginForm input {
+  margin-top: 27px;
+  border: 0px;
+  border-bottom: 2px solid;
+  padding: 5px;
+  width: 230px;
+  font-size: 16px;
+}
+
+.loginForm input:focus {
+  outline: 0;
+}
+
+.continueBtn {
+  width: 250px;
+  padding: 14px;
+  margin-top: 30px;
+  border: 0px;
+  border-radius: 30px;
+  background-color: rgb(199, 199, 199);
+  color: rgb(78, 78, 78);
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.continueBtn:hover {
+  background-color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+
+.createBtn {
+  border: 0px;
+  background-color: transparent;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.createBtn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 420px) {
+  .container {
+    width: 300px;
+  }
+}

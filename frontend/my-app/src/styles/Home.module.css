@@ -58,7 +58,6 @@ body {
 
 .left {
   width: 70%;
-
   display: flex;
   margin: 0;
   flex-direction: column;
@@ -89,7 +88,7 @@ body {
   margin-bottom: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 2vmax;
+  font-size: 1.8vmax;
   font-weight: 700;
 }
 
