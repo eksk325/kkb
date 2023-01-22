@@ -37,6 +37,7 @@ function Login() {
     } else {
       console.log(json.msg);
       localStorage.setItem("token", json.token);
+      localStorage.setItem("email", document.getElementById("userEmail").value);
       navigate("/home");
     }
   };

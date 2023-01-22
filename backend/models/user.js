@@ -22,8 +22,8 @@ const userSchema = new mongoose.Schema(
     },
     salt: String,
     currentBalance: {
-      type: Number,
-      default: 0,
+      type: mongoose.Decimal128,
+      default: 0.0,
     },
     categoryList: [
       {

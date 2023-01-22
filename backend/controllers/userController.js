@@ -1,6 +1,5 @@
 const User = require("../models/user");
 const { validationResult } = require("express-validator");
-const user = require("../models/user");
 const jwt = require("jsonwebtoken");
 const expressJwt = require("express-jwt");
 
@@ -69,11 +68,4 @@ const login = async (req, res) => {
   });
 };
 
-const logout = async (req, res) => {
-  res.clearCookie("token");
-  return res.json({
-    msg: "Log out successful",
-  });
-};
-
-module.exports = { signup, login, logout };
+module.exports = { signup, login };

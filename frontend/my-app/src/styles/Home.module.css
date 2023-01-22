@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter Tight", sans-serif;
 }
 
 .banner {
@@ -8,7 +8,7 @@ body {
 }
 
 .loading {
-  margin-top: 33vh;
+  margin-top: 28vh;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -20,29 +20,31 @@ body {
 }
 
 .loading img {
-  width: 18vw;
+  width: 350px;
 }
 
 .welcome {
   padding-top: 50px;
   padding-bottom: 25px;
   text-align: center;
-  font-size: 2.5vmax;
+  font-size: 40px;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 500;
   top: 0;
 }
 
 .clock {
-  font-size: 7vmax;
+  font-size: 120px;
   font-weight: 700;
   text-align: center;
 }
 
 .date {
-  font-size: 1.5vmax;
+  font-size: 24px;
   font-weight: 600;
   text-align: center;
+  font-style: italic;
+  padding-top: 20px;
 }
 
 .main {
@@ -89,12 +91,47 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 1.8vmax;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.title {
+  font-style: italic;
 }
 
 .balanceText {
-  font-size: 3.25vmax;
-  font-weight: 800;
-  padding-top: 30px;
+  font-size: 3.4vmax;
+  font-weight: 700;
+  padding-top: 15px;
   overflow: hidden;
+}
+
+.logoutBtn {
+  width: 180px;
+  padding: 14px;
+  margin-bottom: 100px;
+  border: 0px;
+  border-radius: 30px;
+  background-color: rgb(199, 199, 199);
+  color: rgb(78, 78, 78);
+  font-weight: 700;
+  font-size: 22px;
+  align-self: center;
+}
+
+.logoutBtn:hover {
+  background-color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+  .welcome {
+    font-size: 30px;
+  }
+  .clock {
+    font-size: 90px;
+  }
+
+  .date {
+    font-size: 18px;
+  }
 }

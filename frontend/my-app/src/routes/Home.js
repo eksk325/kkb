@@ -1,6 +1,8 @@
 import styles from "../styles/Home.module.css";
 import Money from "../js/Money";
 import logo from "../images/logo.png";
+import Cookie from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -10,6 +12,8 @@ function Home() {
   const [date, setDate] = useState("");
 
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   // Updating the greeting, time, and date every 1 second
   useEffect(() => {
@@ -42,6 +46,11 @@ function Home() {
     }, 1000);
   });
 
+  const logout = () => {
+    Cookie.remove("token");
+    navigate("/");
+  };
+
   return (
     <div>
       {loading ? (
@@ -50,16 +59,19 @@ function Home() {
           className={styles.loading}
         >
           <img className={styles.logo} src={logo} alt="logo"></img>
-          <h1 style={{ fontSize: "1.8vw" }}>Loading...</h1>
+          <h1 style={{ fontSize: "36px" }}>Loading...</h1>
         </div>
       ) : (
-        <div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
           <div className={styles.banner}>
             <div className={styles.welcome}>{greeting}</div>
             <div className={styles.clock}>{time}</div>
             <div className={styles.date}>{date}</div>
           </div>
           <Money />
+          <button className={styles.logoutBtn} onClick={logout}>
+            Log out
+          </button>
         </div>
       )}
     </div>
