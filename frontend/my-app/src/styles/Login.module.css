@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+  user-select: none;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -20,7 +21,6 @@ body {
   padding-top: 80px;
   padding-bottom: 60px;
   box-shadow: 20px 20px rgb(255, 205, 79);
-  z-index: 0;
 }
 
 .container span {

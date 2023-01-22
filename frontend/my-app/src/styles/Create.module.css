@@ -1,15 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20vh;
+  align-items: center;
+  user-select: none;
+}
+
+.piggy {
+  width: 280px;
+}
+
+.backBtn {
+  font-family: "Inter", sans-serif;
+}
+
 .createBox {
-  z-index: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   opacity: 100%;
-  position: absolute;
-  margin-top: 23vh;
   border: 3px solid;
   border-radius: 60px;
-  width: 400px;
-  padding-top: 5px;
-  padding-bottom: 50px;
+  width: 750px;
+  padding: 60px;
   background-color: white;
-  z-index: 1;
   text-align: center;
 }
 

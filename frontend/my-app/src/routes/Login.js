@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import styles from "../styles/Login.module.css";
 import { useNavigate } from "react-router-dom";
 import Cookies from "js-cookie";
-import CreateBox from "../js/CreateBox";
 
 function Login() {
   const welcomeText = "Log in";
   const [errorMessage, setErrorMessage] = useState("");
-  const [create, setCreate] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -46,40 +44,34 @@ function Login() {
 
   // CREATE ACCOUNT METHOD
   const createAccount = () => {
-    setCreate(true);
+    navigate("/create-account");
   };
 
   return (
-    <div className={styles.mainContainer}>
-      {create ? <CreateBox /> : <div></div>}
-      <div
-        className={styles.container}
-        style={{ opacity: create ? "0%" : "100%" }}
-      >
-        <span>{welcomeText}</span>
-        <label className={styles.errorMessage}>{errorMessage}</label>
-        <form className={styles.loginForm}>
-          <input
-            type="text"
-            placeholder="Email"
-            id="userEmail"
-            spellCheck="false"
-            required
-          ></input>
-          <input
-            type="password"
-            placeholder="Password"
-            id="userPassword"
-            required
-          ></input>
-          <button className={styles.continueBtn} onClick={login} type="submit">
-            Continue
-          </button>
-        </form>
-        <button className={styles.createBtn} onClick={createAccount}>
-          Create an account
+    <div className={styles.container}>
+      <span>{welcomeText}</span>
+      <label className={styles.errorMessage}>{errorMessage}</label>
+      <form className={styles.loginForm}>
+        <input
+          type="text"
+          placeholder="Email"
+          id="userEmail"
+          spellCheck="false"
+          required
+        ></input>
+        <input
+          type="password"
+          placeholder="Password"
+          id="userPassword"
+          required
+        ></input>
+        <button className={styles.continueBtn} onClick={login} type="submit">
+          Continue
         </button>
-      </div>
+      </form>
+      <button className={styles.createBtn} onClick={createAccount}>
+        Create an account
+      </button>
     </div>
   );
 }
