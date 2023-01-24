@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styles from "../styles/Records.module.css";
+import smile from "../images/smile.png";
+import sad from "../images/sad.png";
 
 function Records() {
   const [records, setRecords] = useState([]);
   const [incomes, setIncomes] = useState([]);
   const [expenses, setExpenses] = useState([]);
-  const [test, setTest] = useState([]);
 
   const [showIncome, setShowIncome] = useState(false);
 
@@ -41,6 +42,12 @@ function Records() {
   return (
     <div>
       <div className={styles.filter}></div>
+      <button
+        onClick={() => setShowIncome(!showIncome)}
+        className={styles.inoutBtn}
+      >
+        {showIncome ? <img src={smile}></img> : <img src={sad}></img>}
+      </button>
       <div className={styles.table}>
         <div className={styles.column}>
           <div className={styles.title}>Date</div>
