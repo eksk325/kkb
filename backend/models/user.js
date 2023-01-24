@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema(
     fixedIncome: [
       {
         title: String,
-        amount: Number,
+        amount: mongoose.Decimal128,
       },
     ],
     fixedExpenses: [
@@ -44,6 +44,7 @@ const userSchema = new mongoose.Schema(
     ],
     moneyRecords: [
       {
+        index: Number,
         date: Date,
         amount: Number,
         category: String,

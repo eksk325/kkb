@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Inter Tight", sans-serif;
+  user-select: none;
 }
 
 .banner {
@@ -53,7 +54,6 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
-
   display: flex;
   justify-content: space-between;
 }
@@ -90,12 +90,13 @@ body {
   margin-bottom: 40px;
   padding-top: 40px;
   padding-bottom: 40px;
-  font-size: 1.8vmax;
+  font-size: 1.9vmax;
   font-weight: 600;
 }
 
 .title {
   font-style: italic;
+  padding-bottom: 30px;
 }
 
 .balanceText {
@@ -108,7 +109,7 @@ body {
 .logoutBtn {
   width: 180px;
   padding: 14px;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
   border: 0px;
   border-radius: 30px;
   background-color: rgb(199, 199, 199);
@@ -121,6 +122,38 @@ body {
 .logoutBtn:hover {
   background-color: rgb(171, 171, 171);
   cursor: pointer;
+}
+
+.fixed {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fixed div {
+  width: 85%;
+  margin: auto;
+}
+
+.addBtn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  font-size: 30px;
+  border: 0px;
+  background-color: rgb(199, 199, 199);
+  margin-top: 40px;
+}
+
+.addBtn:hover {
+  background-color: rgb(171, 171, 171);
+  cursor: pointer;
+}
+
+.infocard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media only screen and (max-width: 700px) {

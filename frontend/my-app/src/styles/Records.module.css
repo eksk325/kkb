@@ -1,0 +1,22 @@
+body {
+  font-family: "Inter Tight", sans-serif;
+}
+
+.table {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.element {
+  padding: 15px;
+  font-size: 18px;
+}

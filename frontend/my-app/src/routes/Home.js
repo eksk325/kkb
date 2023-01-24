@@ -3,7 +3,6 @@ import Money from "../js/Money";
 import logo from "../images/logo.png";
 import Cookie from "js-cookie";
 import { useNavigate } from "react-router-dom";
-
 import { useState, useEffect } from "react";
 
 function Home() {
