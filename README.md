@@ -1,5 +1,5 @@
 # KKB 💵
 > Money tracker web app
 
-**I was inspired to start this project to practise MERN stack development, and also manage my money in a simple and aesthetically pleasing way.**
+I was inspired to start this project to practise MERN stack development, and also allow people to manage their finances in a simple and aesthetically pleasing way. Some key features of this web app include: account creation, user authentication, adding & removing income and expense records, fixed income and expenses to reduce unnecessary repetition, and a total balance overview.
 
