@@ -23,7 +23,7 @@ function Login() {
       password: document.getElementById("userPassword").value,
     };
 
-    const response = await fetch("/api/login", {
+    const response = await fetch("/login", {
       method: "POST",
       body: JSON.stringify(loginData),
       headers: { "Content-type": "application/json; charset=UTF-8" },
