@@ -23,10 +23,13 @@ function Login() {
       password: document.getElementById("userPassword").value,
     };
 
-    const response = await fetch("/login", {
+    const response = await fetch("/api/login", {
       method: "POST",
       body: JSON.stringify(loginData),
-      headers: { "Content-type": "application/json; charset=UTF-8" },
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+        Host: "https://kkb-app.herokuapp.com/",
+      },
     });
 
     const json = await response.json();
